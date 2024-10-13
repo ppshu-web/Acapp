@@ -4,7 +4,7 @@ class AcGamePlayground {
         this.$playground = $(`<div class="ac-game-playground"></div>`);
 
         this.hide();
-        
+
         this.start();
     }
 

@@ -124,7 +124,7 @@ class GameMap extends AcGameObject {
     }
 
     render() {
-        this.ctx.fillStyle = "rgba(238, 230, 219, 0.2)";
+        this.ctx.fillStyle = "rgba(177, 112, 155, 0.05)";
         this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
     }
 }
@@ -402,7 +402,7 @@ class AcGamePlayground {
         this.$playground = $(`<div class="ac-game-playground"></div>`);
 
         this.hide();
-        
+
         this.start();
     }
 
@@ -434,9 +434,11 @@ class AcGamePlayground {
     }
 }
 export class AcGame {
-    constructor(id) {
+    constructor(id, AcWingOS) {
         this.id = id;
         this.$ac_game = $('#' + id);
+        this.AcWingOS = AcWingOS;
+
         this.menu = new AcGameMenu(this);
         this.playground = new AcGamePlayground(this);
 
