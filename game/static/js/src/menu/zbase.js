@@ -54,39 +54,3 @@ class AcGameMenu {
     }
 }
 
-class AcGamePlayground {
-    constructor(root) {
-        this.root = root;
-        this.$playground = $(`<div>GAME</div>`);
-
-        this.hide();
-        this.root.$ac_game.append(this.$playground);
-
-        this.start();
-    }
-
-    start() {
-    }
-
-    show(){
-        this.$playground.show();
-    }
-
-    hide() {
-        this.$playground.hide();
-    }
-}
-class AcGame {
-    constructor(id) {
-        this.id = id;
-        this.$ac_game = $('#' + id);
-        this.menu = new AcGameMenu(this);
-        this.playground = new AcGamePlayground(this);
-
-        this.start();
-    }
-
-    start() {
-
-    }
-}
